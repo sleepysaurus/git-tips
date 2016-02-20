@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>Git Tips</title>
+	<link href='http://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css" media="screen">
+</head>
+<body id="format">
+	<div>
+		<div>
+			<h1 id="top">Git Tips</h1>
+			<ul class="nav">
+				<li><a href="#workflow">Git Workflow</a></li>
+				<li><a href="#deleting">Deleting a .git File</a></li>
+				<li><a href="#readable">Readable Git Log</a></li>
+			</ul>
+			<p>These tips are for Mac users.</p>
+		</div>
+		<div>
+			<h2 id="workflow">Git Workflow</h2>
+			<p>The following instructions in this section is sourced from <a href="https://gist.github.com/dbc-challenges/f5bfc65d4abd64965b4d" target="_blank">https://gist.github.com/dbc-challenges/f5bfc65d4abd64965b4d</a></p>
+			<div>
+				<h3>The Git Cyle</h3>
+				<p>Here is the Git Workflow. Instructions for each step is outlined below.</p>
+				<ol>
+					<li>Add and commit</li>
+					<li>Pull the master from github (git will automagically merge changes unless there is a direct conflict)</li>
+					<li>Push your integrated local copy back to master</li>
+					<li>Go back to #1 </li>
+				</ol>
+			</div>
+			<div>
+				<h3>Create a Repository</h3>
+				<ol>
+					<li>Go to <a href="http://www.github.com" target="_blank">github.com</a>, login, and create a repository. Follow the instructions for cloning your repository to your local machine.</li>
+					<li>NOW MAKE SURE THE DIRECTORY PATH IS CORRECT<br>If you don't you might encounter the next item below <a href="#">Deleting .git</a></li>
+					<li>In Terminal, type in the following.<br>Press return after each line. The &#35;&#39;s are comments.</li>
+				</ol>
+				<img src="img/repo.png" alt="Create a Repository">
+			</div>
+			<div>
+				<h3>Adding and Committing</h3>
+				<p>Every time you make a notable change, you'll want to add and commit these changes. Especially as you're starting out, err on the side of committing extremely often with incremental changes.Like when you add new media:</p>
+				<img src="img/add.png" alt="Add">
+				<p>Or when you modify the styling of image elements:</p>
+				<img src="img/modify.png" alt="Modify">
+			</div>
+			<div>
+				<h3>Pulling and Pushing</h3>
+				<p>When you are ready to push up your changes to <a href="http://www.github.com" target="_blank">github.com</a>, get in the habit of first pulling down the last updated copy from github. Usually when you're working on github, you will be working on a team, and it's important to pull the latest copy of your repo to make sure you're not missing any changes. Git will automatically merge all your recent changes into the github master copy. Then, push your repo up to <a href="http://www.github.com" target="_blank">github.com.</a></p>
+				<img src="img/pullpush.png" alt="Pulling and Pushing">
+			</div>
+			<div>
+				<h3>Git Status and Log</h3>
+				<p>You can see the status of your commits and stage by using these commands:</p>
+				<img src="img/status.png" alt="Status">
+				<p><a href="#top" class="top">Top</a></p>
+			</div>
+		</div>
+		<div>
+			<h2 id="deleting">Deleting a .git File</h2>
+			<p>Question</p>
+			<p>Is there a way to re-set git on my computer? Will uninstalling it, then re-installing git work? I accidentally put my whole drive in the repository. I tried to do a hard reset, but when I git log I can still see all the files in there.</p>
+			<p>Answer</p>
+			<ol>
+				<li>Unhide files:  <a href="http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/" target="_blank">http://ianlunn.co.uk/articles/quickly-showhide-hidden-files-mac-os-x-mavericks/</a></li>
+				<li>If you go to the base folder of your repo and delete the .git folder that will get rid of your local repository. If you have pushed to github you will need to delete the repo there as well.</li>
+			</ol>
+			<p><a href="#top" class="top">Top</a></p>
+		</div>
+		<div>
+			<h2 id="readable">Readable Git Log</h2>
+			<p>Source: <a href="https://coderwall.com/p/euwpig" target="_blank">https://coderwall.com/p/euwpig</a></p>
+			<ul>
+				<li>Copy and paste the line below on your terminal: <br><br>git config --global alias.lg "log --color --graph --pretty=format:'&#37;Cred&#37;h&#37;Creset -&#37;C(yellow)&#37;d&#37;Creset &#37;s &#37;Cgreen(&#37;cr) &#37;C(bold blue)&#60;&#37;an&#62;&#37;Creset' --abbrev-commit"<br><br></li>
+				<li>Every time you need to see your log, just type in:</li>
+				<img src="img/gitlg.png" alt="Git Log">
+				<li>Or, if you want to see the lines that changed</li>
+				<img src="img/gitlgp.png" alt="Git Log Changes">
+			</ol>
+		</div>
+		<div>
+			<p><a href="#top" class="top">Top</a></p>
+		</div>
+	</div>
+</body>
+</html>

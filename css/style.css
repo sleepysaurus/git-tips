@@ -1,0 +1,51 @@
+body {
+	font-family: 'Varela Round', sans-serif;
+	font-size: 1em;
+	color: #470447;
+	background: #9CDDF2;
+	border-style: solid 
+}
+
+a {
+	color: #717BA3;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #AD8FD6;
+}
+
+h1 {
+	font-size: 3em;
+	letter-spacing: 0.25px;
+	color: #730673;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.7em;
+	color: #DE717E;
+}
+
+h3 {
+	font-size: 1.500em;
+	color: #DE717E;
+}
+
+
+ul.nav li a {
+	color: #3B3191;
+}
+
+ul.nav li a:hover {
+	color: #AD8FD6;
+}
+
+#format {
+	padding: 0px 50px;
+	margin: 20px 200px
+}
+
+.top {
+	color: #FFA033;
+}
